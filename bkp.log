@@ -1,0 +1,104 @@
+
+Wed Aug 05 17:58:59 CST 2020
+MySQL.DoBackup--> Backup startedWed Aug 05 17:58:59 CST 2020
+
+MySQL.DoBackup--> Processing DB apologetica Wed Aug 05 17:58:59 CST 2020
+
+CMD: mysqldump --defaults-file=4fee0083-9fc5-45be-b3dc-b094a999788d.osais --user=bgarita --host=127.0.0.1 --port=3308 --column-statistics=0 --default-character-set=utf8 --single-transaction=TRUE --routines --events apologeticaWed Aug 05 17:58:59 CST 2020
+
+DefaultsFile: 4fee0083-9fc5-45be-b3dc-b094a999788d.osaisWed Aug 05 17:58:59 CST 2020
+
+MySQL.DoBackup--> ERROR: Server not available!
+Server: 127.0.0.1
+Database: apologetica
+Wed Aug 05 18:05:20 CST 2020
+MySQL.DoBackup--> Backup startedWed Aug 05 18:05:20 CST 2020
+
+MySQL.DoBackup--> Processing DB apologetica Wed Aug 05 18:05:20 CST 2020
+
+CMD: mysqldump --defaults-file=51702a33-6524-44b3-9c16-a21f9b788d18.osais --user=bgarita --host=127.0.0.1 --port=3308 --default-character-set=utf8 --single-transaction=TRUE --routines --events apologeticaWed Aug 05 18:05:20 CST 2020
+
+DefaultsFile: 51702a33-6524-44b3-9c16-a21f9b788d18.osaisWed Aug 05 18:05:21 CST 2020
+
+MySQL.DoBackup--> Database apologetica completed successfullyWed Aug 05 18:05:21 CST 2020
+
+MySQL.DoBackup--> Processing DB pulange Wed Aug 05 18:05:21 CST 2020
+
+CMD: mysqldump --defaults-file=51702a33-6524-44b3-9c16-a21f9b788d18.osais --user=bgarita --host=127.0.0.1 --port=3308 --default-character-set=utf8 --single-transaction=TRUE --routines --events pulangeWed Aug 05 18:05:21 CST 2020
+
+DefaultsFile: 51702a33-6524-44b3-9c16-a21f9b788d18.osaisWed Aug 05 18:05:37 CST 2020
+
+MySQL.DoBackup--> Database pulange completed successfullyWed Aug 05 18:05:37 CST 2020
+
+MySQL.DoBackup--> Backup process completed successfully!Wed Aug 05 18:08:45 CST 2020
+MySQL.DoBackup--> Backup startedWed Aug 05 18:08:45 CST 2020
+
+MySQL.DoBackup--> Processing DB apologetica Wed Aug 05 18:08:45 CST 2020
+
+CMD: mysqldump --defaults-file=b4138561-0f46-416c-b1ce-29daf251f013.osais --user=bgarita --host=127.0.0.1 --port=3308 --default-character-set=utf8 --single-transaction=TRUE --routines --events apologeticaWed Aug 05 18:08:45 CST 2020
+
+DefaultsFile: b4138561-0f46-416c-b1ce-29daf251f013.osaisWed Aug 05 18:08:45 CST 2020
+
+MySQL.DoBackup--> Database apologetica completed successfullyWed Aug 05 18:08:45 CST 2020
+
+MySQL.DoBackup--> Processing DB pulange Wed Aug 05 18:08:45 CST 2020
+
+CMD: mysqldump --defaults-file=b4138561-0f46-416c-b1ce-29daf251f013.osais --user=bgarita --host=127.0.0.1 --port=3308 --default-character-set=utf8 --single-transaction=TRUE --routines --events pulangeWed Aug 05 18:08:45 CST 2020
+
+DefaultsFile: b4138561-0f46-416c-b1ce-29daf251f013.osaisWed Aug 05 18:08:59 CST 2020
+
+MySQL.DoBackup--> Database pulange completed successfullyWed Aug 05 18:08:59 CST 2020
+
+MySQL.DoBackup--> Backup process completed successfully!Tue Oct 26 20:28:44 CST 2021
+MySQL.DoBackup--> Backup startedTue Oct 26 20:28:44 CST 2021
+
+MySQL.DoBackup--> Processing DB apologetica Tue Oct 26 20:28:45 CST 2021
+
+MySQL.DoBackup--> Database apologetica completed successfullyTue Oct 26 20:28:45 CST 2021
+
+MySQL.DoBackup--> Processing DB pulange Tue Oct 26 20:29:08 CST 2021
+
+MySQL.DoBackup--> Database pulange completed successfullyTue Oct 26 20:29:08 CST 2021
+
+MySQL.DoBackup--> Backup process completed successfully!Tue Oct 26 20:29:12 CST 2021
+MySQL.DoBackup--> Backup startedTue Oct 26 20:29:12 CST 2021
+
+MySQL.DoBackup--> Processing DB apologetica Tue Oct 26 20:29:12 CST 2021
+
+MySQL.DoBackup--> Database apologetica completed successfullyTue Oct 26 20:29:12 CST 2021
+
+MySQL.DoBackup--> Processing DB pulange Tue Oct 26 20:29:27 CST 2021
+
+MySQL.DoBackup--> Database pulange completed successfullyTue Oct 26 20:29:27 CST 2021
+
+MySQL.DoBackup--> Backup process completed successfully!Tue Oct 26 20:36:49 CST 2021
+MySQL.DoBackup--> Backup startedTue Oct 26 20:36:50 CST 2021
+
+MySQL.DoBackup--> Processing DB apologetica Tue Oct 26 20:36:50 CST 2021
+
+MySQL.DoBackup--> Database apologetica completed successfullyTue Oct 26 20:36:50 CST 2021
+
+MySQL.DoBackup--> Processing DB credito_prod Tue Oct 26 20:36:51 CST 2021
+
+MySQL.DoBackup--> Database credito_prod completed successfullyTue Oct 26 20:36:51 CST 2021
+
+MySQL.DoBackup--> Processing DB pulange Tue Oct 26 20:37:06 CST 2021
+
+MySQL.DoBackup--> Database pulange completed successfullyTue Oct 26 20:37:06 CST 2021
+
+MySQL.DoBackup--> Backup process completed successfully!Tue Oct 26 20:37:08 CST 2021
+MySQL.DoBackup--> Backup startedTue Oct 26 20:37:08 CST 2021
+
+MySQL.DoBackup--> Processing DB apologetica Tue Oct 26 20:37:09 CST 2021
+
+MySQL.DoBackup--> Database apologetica completed successfullyTue Oct 26 20:37:09 CST 2021
+
+MySQL.DoBackup--> Processing DB credito_prod Tue Oct 26 20:37:09 CST 2021
+
+MySQL.DoBackup--> Database credito_prod completed successfullyTue Oct 26 20:37:09 CST 2021
+
+MySQL.DoBackup--> Processing DB pulange Tue Oct 26 20:37:23 CST 2021
+
+MySQL.DoBackup--> Database pulange completed successfullyTue Oct 26 20:37:23 CST 2021
+
+MySQL.DoBackup--> Backup process completed successfully!

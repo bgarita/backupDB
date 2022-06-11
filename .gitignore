@@ -1,0 +1,6 @@
+*.class
+backupUser.properties
+mail.properties
+BackupDB.jar
+build
+dist
