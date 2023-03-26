@@ -44,7 +44,7 @@ public class DoBackup {
         new Bitacora().writeToLog(this.getClass().getName() + "--> " + "Backup started");
 
         String unique = Ut.getUniqueName(SystemConstants.DATE_FORMAT);
-        String DB;
+        String db;
         Boolean error = false;
 
         // Crear el archivo con los defaults
@@ -64,10 +64,10 @@ public class DoBackup {
 
         // Cambiar después a una lista
         for (String dataBase : dataBases) {
-            DB = dataBase.trim();
+            db = dataBase.trim();
 
-            System.out.println("Processing DB " + DB + "...");
-            new Bitacora().writeToLog("\n" + this.getClass().getName() + "--> " + "Processing DB " + DB + " ");
+            System.out.println("Processing DB " + db + "...");
+            new Bitacora().writeToLog("\n" + this.getClass().getName() + "--> " + "Processing DB " + db + " ");
 
             /*
             Este string fue probado en mysql server 5.5, 5.6, 5.7, 8.0 y en MariaDB 10
@@ -79,16 +79,17 @@ public class DoBackup {
             
             Luego habrá que crear un parámetro para ubicar la herramienta según
             corresponda con el motor de base de datos.
+            
+            25/03/2023 Al hacer pruebaS se determinó que las funciones y procedimientos almacenados
+            solo se respaldan si el usuario tiene los siguientes permisos:
+            GRANT SELECT, SHOW VIEW, CREATE TEMPORARY TABLES, EVENT, TRIGGER ON *.* TO 'backup'@'localhost';
              */
             String tool = "mysqldump ";
             String cmd = tool
                     + "--defaults-file=" + defaultsFileName + " --user=" + user + " --host=" + host + " --port=" + port
-                    + " --default-character-set=utf8 --single-transaction=TRUE --routines --events --triggers " + DB;
-            String fileName = targetFolder + "/" + unique + "_" + DB + ".osais";
-            String zipFileName = targetFolder + "/" + unique + "_" + DB; // No debe llevar extensión
-            
-            //new Bitacora().writeToLog("\nCMD: " + cmd);
-            //new Bitacora().writeToLog("\nDefaultsFile: " + defaultsFileName);
+                    + " --default-character-set=utf8 --single-transaction=TRUE --routines --events --triggers " + db;
+            String fileName = targetFolder + "/" + unique + "_" + db + ".osais";
+            String zipFileName = targetFolder + "/" + unique + "_" + db; // No debe llevar extensión
             
             try {
                 Process process = Runtime.getRuntime().exec(cmd);
@@ -110,7 +111,7 @@ public class DoBackup {
                 */
                 // Si len es negativo es porque no se pudo traer ningún dato
                 if (len < 0){
-                    throw new Exception("ERROR: Server not available!\nServer: " + host + "\nDatabase: " + DB);
+                    throw new Exception("ERROR: Server not available!\nServer: " + host + "\nDatabase: " + db);
                 } // end if
 
                 while (len > 0) {
@@ -124,7 +125,7 @@ public class DoBackup {
                 archivo.zipFile(new File(fileName), new File(zipFileName));
 
                 new File(fileName).delete();
-                new Bitacora().writeToLog("\n" + this.getClass().getName() + "--> " + "Database " + DB + " completed successfully");
+                new Bitacora().writeToLog("\n" + this.getClass().getName() + "--> " + "Database " + db + " completed successfully");
             } catch (Exception ex) {
                 error = true;
                 new Bitacora().writeToLog("\n" + this.getClass().getName() + "--> " + ex.getMessage() + "\n");
@@ -134,7 +135,7 @@ public class DoBackup {
                 FileSystem fs = FileSystems.getDefault();
                 Path path = fs.getPath("bkmsg.html");
                 String text = Ut.fileToString(path);
-                text = text.replace("[msg]", "[DB=" + DB + "] Backup failed! <br>See attachment for more details.").replace("blue", "red");
+                text = text.replace("[msg]", "[DB=" + db + "] Backup failed! <br>See attachment for more details.").replace("blue", "red");
                 
                 SendMail mail = new SendMail();
                 mail.setTitulo("Database Backup");

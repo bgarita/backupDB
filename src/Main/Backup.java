@@ -21,7 +21,7 @@ public class Backup {
      * @param args the command line arguments
      * @throws java.io.FileNotFoundException
      */
-    public static void main(String[] args) throws FileNotFoundException, IOException {
+    public static void main(String[] args) throws Exception {
         TimerTask tasknew;
         final long interval = getInterval();
         setStartTime();
@@ -50,26 +50,21 @@ public class Backup {
         Properties scheduleProp = new Properties();
         try (FileInputStream fi = new FileInputStream("schedule.properties")) {
             scheduleProp.load(fi);
-            fi.close();
         } // end try
 
         String[] temp = scheduleProp.getProperty("interval").split("-");
         switch (temp[1]) {
-            case "H": { // Horas
+            case "H" -> { // Horas
                 interval = Integer.parseInt(temp[0]) * min * seg * mil;
-                break;
             }
-            case "M": { // Minutos
+            case "M" -> { // Minutos
                 interval = Integer.parseInt(temp[0]) * seg * mil;
-                break;
             }
-            case "S": { // Segundos
+            case "S" -> { // Segundos
                 interval = Integer.parseInt(temp[0]) * mil;
-                break;
             }
-            default: {
+            default -> {
                 interval = Integer.parseInt(temp[0]);
-                break;
             }
         } // end switch
 
@@ -77,11 +72,11 @@ public class Backup {
     } // end getInterval
 
     private static void setStartTime() throws FileNotFoundException, IOException {
-        int hour, min;
+        int hour;
+        int min;
         Properties scheduleProp = new Properties();
         try (FileInputStream fi = new FileInputStream("schedule.properties")) {
             scheduleProp.load(fi);
-            fi.close();
         } // end try
 
         String[] temp = scheduleProp.getProperty("startTime").split(":");

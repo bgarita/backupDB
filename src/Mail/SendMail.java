@@ -13,14 +13,14 @@ public class SendMail {
     private String texto;
     private String destinatario;
     private boolean error;
-    private String error_msg;
+    private String errorMsg;
 
     public SendMail() {
         this.titulo = "";
         this.texto = "";
         this.destinatario = "";
         this.error = false;
-        this.error_msg = "";
+        this.errorMsg = "";
     } // end constructor
 
     public SendMail(String titulo, String texto, String destinatario, boolean error, String error_msg) {
@@ -28,7 +28,7 @@ public class SendMail {
         this.texto = texto;
         this.destinatario = destinatario;
         this.error = error;
-        this.error_msg = error_msg;
+        this.errorMsg = error_msg;
     } // end full contructor
 
     
@@ -64,12 +64,12 @@ public class SendMail {
         this.error = error;
     }
 
-    public String getError_msg() {
-        return error_msg;
+    public String getErrorMsg() {
+        return errorMsg;
     }
 
-    public void setError_msg(String error_msg) {
-        this.error_msg = error_msg;
+    public void setErrorMsg(String errorMsg) {
+        this.errorMsg = errorMsg;
     }
 
     /**
@@ -89,9 +89,8 @@ public class SendMail {
         MailSender sender = new MailSender();
 
         if (Correo.malformado(destinatario)) {
-            this.error_msg = "Correo mal formado " + destinatario + ". No fue enviado.";
-            b.writeToLog(
-                    "\n" + this.error_msg
+            this.errorMsg = "Correo mal formado " + destinatario + ". No fue enviado.";
+            b.writeToLog("\n" + this.errorMsg
                     + GregorianCalendar.getInstance().getTime());
             this.error = true;
 
@@ -109,16 +108,16 @@ public class SendMail {
             if (sender.isError()) {
                 // Aquí no se escribe en bitácora porque la clase MailSender ya lo hizo
                 this.error = true;
-                this.error_msg = sender.getErrorMessage();
+                this.errorMsg = sender.getErrorMessage();
                 return false;
             } // end if
         } catch (Exception ex) {
             this.error = true;
-            this.error_msg = "ERROR: " + ex.getMessage() + " " + destinatario + ". "
+            this.errorMsg = "ERROR: " + ex.getMessage() + " " + destinatario + ". "
                     + "Correo no enviado.";
-            b.writeToLog(this.error_msg);
+            b.writeToLog(this.errorMsg);
             return false;
-        } // end try-catch
+        } // end try-catch // end try-catch
 
         // Si llega hasta acá significa que todo salió bien
         return true;
