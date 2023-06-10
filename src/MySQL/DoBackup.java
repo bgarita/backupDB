@@ -48,7 +48,7 @@ public class DoBackup {
         Boolean error = false;
 
         // Crear el archivo con los defaults
-        String defaultsFileName = Ut.getUniqueName(SystemConstants.RANDOM_FORMAT) + ".osais";
+        String defaultsFileName = Ut.getUniqueName(SystemConstants.RANDOM_FORMAT) + ".cnf";
         File defaultsF = new File(defaultsFileName);
         Archivos archivo = new Archivos();
         try {
@@ -158,6 +158,14 @@ public class DoBackup {
         // Enviar el correo de notificación
         FileSystem fs = FileSystems.getDefault();
         Path path = fs.getPath("bkmsg.html");
+        /*
+        10/06/2023
+        Por alguna razón las tildes no salen bien en el correo, a pesar de que
+        tanto el archivo se lee correctamente y en debug se ven las tildes y
+        el html está configurado igual que la clase de java charset=iso-8859-1
+        Y si uso la función que está comentada tampoco se convierte a tildes.
+        */
+        //String text = Ut.stringToHTML(Ut.fileToString(path));
         String text = Ut.fileToString(path);
         text = text.replace("[msg]", "Backup ended successfuly!");
 

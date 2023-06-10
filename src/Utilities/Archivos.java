@@ -12,7 +12,14 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.nio.file.Files;
+import java.nio.file.LinkOption;
 import java.nio.file.Paths;
+import java.nio.file.attribute.FileTime;
+import java.nio.file.attribute.PosixFileAttributeView;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.zip.ZipEntry;
@@ -87,18 +94,16 @@ public class Archivos {
     public void copyFilex(File in, File out) {
 
         try {
-            BufferedOutputStream fileOut;
-            try (BufferedInputStream fileIn = new BufferedInputStream(new FileInputStream(in))) {
-                fileOut = new BufferedOutputStream(new FileOutputStream(out));
+            try (
+                    BufferedInputStream fileIn = new BufferedInputStream(new FileInputStream(in)); 
+                    BufferedOutputStream fileOut = new BufferedOutputStream(new FileOutputStream(out))) {
                 byte[] buf = new byte[2048];
                 int i;
                 while ((i = fileIn.read(buf)) != -1) {
                     fileOut.write(buf, 0, i);
                 } // end while
-                fileIn.close();
-                fileOut.close();
             } // end try with resources        
-        } catch (Exception ex) {
+        } catch (IOException ex) {
             this.error = true;
             this.mensaje_error = ex.getMessage();
             new Bitacora().writeToLog(this.getClass().getName() + "--> " + ex.getMessage());
@@ -289,4 +294,16 @@ public class Archivos {
             zos.write(bytes, 0, bytes.length);
         } // end if
     } // end addZipFile
+    
+    public long getAge(File file) throws IOException {
+        
+        Calendar cal = GregorianCalendar.getInstance();
+        FileTime date = Files.getLastModifiedTime(file.toPath(), LinkOption.NOFOLLOW_LINKS);
+        cal.setTimeInMillis(date.toMillis());
+        Date sinceDate = cal.getTime();
+        cal.setTimeInMillis(System.currentTimeMillis());
+        Date toDate = cal.getTime();
+        
+        return Ut.dateDiff(sinceDate, toDate, Ut.DAY);
+    }
 } // end class

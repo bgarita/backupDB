@@ -101,4 +101,342 @@ MySQL.DoBackup--> Processing DB pulange Tue Oct 26 20:37:23 CST 2021
 
 MySQL.DoBackup--> Database pulange completed successfullyTue Oct 26 20:37:23 CST 2021
 
-MySQL.DoBackup--> Backup process completed successfully!
+MySQL.DoBackup--> Backup process completed successfully!Sat Jun 10 10:46:03 CST 2023
+MySQL.DoBackup--> Backup startedSat Jun 10 10:46:05 CST 2023
+
+MySQL.DoBackup--> Processing DB apologetica Sat Jun 10 10:46:05 CST 2023
+
+MySQL.DoBackup--> Cannot run program "mysqldump": CreateProcess error=2, The system cannot find the file specified
+Sat Jun 10 11:04:30 CST 2023
+MySQL.DoBackup--> Backup startedSat Jun 10 11:05:49 CST 2023
+
+MySQL.DoBackup--> Processing DB apologetica Sat Jun 10 11:07:08 CST 2023
+
+MySQL.DoBackup--> Cannot run program "mysqldump": CreateProcess error=2, The system cannot find the file specified
+Sat Jun 10 11:08:23 CST 2023
+MySQL.DoBackup--> Backup startedSat Jun 10 11:09:04 CST 2023
+
+MySQL.DoBackup--> Processing DB apologetica Sat Jun 10 11:10:49 CST 2023
+
+MySQL.DoBackup--> Database apologetica completed successfullySat Jun 10 11:10:56 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Sat Jun 10 11:11:19 CST 2023
+
+MySQL.DoBackup--> Database credito_prod completed successfullySat Jun 10 11:11:25 CST 2023
+
+MySQL.DoBackup--> Processing DB pulange Sat Jun 10 11:12:20 CST 2023
+
+MySQL.DoBackup--> Database pulange completed successfullySat Jun 10 11:12:33 CST 2023
+
+MySQL.DoBackup--> Backup process completed successfully!Sat Jun 10 12:41:45 CST 2023
+MySQL.DoBackup--> Backup startedSat Jun 10 12:42:49 CST 2023
+
+MySQL.DoBackup--> Processing DB apologetica Sat Jun 10 12:43:12 CST 2023
+
+MySQL.DoBackup--> Database apologetica completed successfullySat Jun 10 12:43:19 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Sat Jun 10 12:43:22 CST 2023
+
+MySQL.DoBackup--> Database credito_prod completed successfullySat Jun 10 12:43:22 CST 2023
+
+MySQL.DoBackup--> Processing DB pulange Sat Jun 10 12:44:01 CST 2023
+
+MySQL.DoBackup--> Database pulange completed successfullySat Jun 10 12:44:36 CST 2023
+
+MySQL.DoBackup--> Backup process completed successfully!Sat Jun 10 12:48:56 CST 2023
+MySQL.DoBackup--> Backup startedSat Jun 10 12:49:01 CST 2023
+
+MySQL.DoBackup--> Processing DB apologetica Sat Jun 10 12:49:02 CST 2023
+
+MySQL.DoBackup--> Database apologetica completed successfullySat Jun 10 12:49:02 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Sat Jun 10 12:49:05 CST 2023
+
+MySQL.DoBackup--> Database credito_prod completed successfullySat Jun 10 12:49:05 CST 2023
+
+MySQL.DoBackup--> Processing DB pulange Sat Jun 10 12:49:40 CST 2023
+
+MySQL.DoBackup--> Database pulange completed successfullySat Jun 10 12:49:40 CST 2023
+
+MySQL.DoBackup--> Backup process completed successfully!Sat Jun 10 12:53:28 CST 2023
+MySQL.DoBackup--> Backup startedSat Jun 10 12:53:34 CST 2023
+
+MySQL.DoBackup--> Processing DB apologetica Sat Jun 10 12:53:36 CST 2023
+
+MySQL.DoBackup--> Database apologetica completed successfullySat Jun 10 12:53:36 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Sat Jun 10 12:53:39 CST 2023
+
+MySQL.DoBackup--> Database credito_prod completed successfullySat Jun 10 12:53:39 CST 2023
+
+MySQL.DoBackup--> Processing DB pulange Sat Jun 10 12:54:13 CST 2023
+
+MySQL.DoBackup--> Database pulange completed successfullySat Jun 10 12:54:13 CST 2023
+
+MySQL.DoBackup--> Backup process completed successfully!Sat Jun 10 12:58:42 CST 2023
+MySQL.DoBackup--> Backup startedSat Jun 10 12:58:47 CST 2023
+
+MySQL.DoBackup--> Processing DB apologetica Sat Jun 10 12:58:48 CST 2023
+
+MySQL.DoBackup--> Database apologetica completed successfullySat Jun 10 12:58:48 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Sat Jun 10 12:58:51 CST 2023
+
+MySQL.DoBackup--> Database credito_prod completed successfullySat Jun 10 12:58:51 CST 2023
+
+MySQL.DoBackup--> Processing DB pulange Sat Jun 10 12:59:21 CST 2023
+
+MySQL.DoBackup--> Database pulange completed successfullySat Jun 10 12:59:21 CST 2023
+
+MySQL.DoBackup--> Backup process completed successfully!Sat Jun 10 13:19:06 CST 2023
+MySQL.DoBackup--> Backup startedSat Jun 10 13:19:08 CST 2023
+
+MySQL.DoBackup--> Processing DB apologetica Sat Jun 10 13:19:10 CST 2023
+
+MySQL.DoBackup--> Database apologetica completed successfullySat Jun 10 13:19:10 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Sat Jun 10 13:19:13 CST 2023
+
+MySQL.DoBackup--> Database credito_prod completed successfullySat Jun 10 13:19:13 CST 2023
+
+MySQL.DoBackup--> Processing DB pulange Sat Jun 10 13:19:48 CST 2023
+
+MySQL.DoBackup--> Database pulange completed successfullySat Jun 10 13:19:48 CST 2023
+
+MySQL.DoBackup--> Backup process completed successfully!Sat Jun 10 13:33:40 CST 2023
+MySQL.DoBackup--> Backup startedSat Jun 10 13:33:43 CST 2023
+
+MySQL.DoBackup--> Processing DB apologetica Sat Jun 10 13:33:44 CST 2023
+
+MySQL.DoBackup--> Database apologetica completed successfullySat Jun 10 13:33:44 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Sat Jun 10 13:33:47 CST 2023
+
+MySQL.DoBackup--> Database credito_prod completed successfullySat Jun 10 13:33:47 CST 2023
+
+MySQL.DoBackup--> Processing DB pulange Sat Jun 10 13:34:22 CST 2023
+
+MySQL.DoBackup--> Database pulange completed successfullySat Jun 10 13:34:22 CST 2023
+
+MySQL.DoBackup--> Backup process completed successfully!Sat Jun 10 13:35:58 CST 2023
+MySQL.DoBackup--> Backup startedSat Jun 10 13:35:58 CST 2023
+
+MySQL.DoBackup--> Processing DB apologetica Sat Jun 10 13:36:00 CST 2023
+
+MySQL.DoBackup--> Database apologetica completed successfullySat Jun 10 13:36:00 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Sat Jun 10 13:36:02 CST 2023
+
+MySQL.DoBackup--> Database credito_prod completed successfullySat Jun 10 13:36:02 CST 2023
+
+MySQL.DoBackup--> Processing DB pulange Sat Jun 10 13:36:34 CST 2023
+
+MySQL.DoBackup--> Database pulange completed successfullySat Jun 10 13:36:34 CST 2023
+
+MySQL.DoBackup--> Backup process completed successfully!Sat Jun 10 13:39:46 CST 2023
+MySQL.DoBackup--> Backup startedSat Jun 10 13:39:49 CST 2023
+
+MySQL.DoBackup--> Processing DB apologetica Sat Jun 10 13:39:50 CST 2023
+
+MySQL.DoBackup--> Database apologetica completed successfullySat Jun 10 13:39:50 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Sat Jun 10 13:39:53 CST 2023
+
+MySQL.DoBackup--> Database credito_prod completed successfullySat Jun 10 13:39:53 CST 2023
+
+MySQL.DoBackup--> Processing DB pulange Sat Jun 10 13:40:31 CST 2023
+
+MySQL.DoBackup--> Database pulange completed successfullySat Jun 10 13:40:31 CST 2023
+
+MySQL.DoBackup--> Backup process completed successfully!Sat Jun 10 13:41:57 CST 2023
+MySQL.DoBackup--> Backup startedSat Jun 10 13:41:59 CST 2023
+
+MySQL.DoBackup--> Processing DB apologetica Sat Jun 10 13:42:00 CST 2023
+
+MySQL.DoBackup--> Database apologetica completed successfullySat Jun 10 13:42:00 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Sat Jun 10 13:42:03 CST 2023
+
+MySQL.DoBackup--> Database credito_prod completed successfullySat Jun 10 13:42:03 CST 2023
+
+MySQL.DoBackup--> Processing DB pulange Sat Jun 10 13:42:37 CST 2023
+
+MySQL.DoBackup--> Database pulange completed successfullySat Jun 10 13:42:37 CST 2023
+
+MySQL.DoBackup--> Backup process completed successfully!Sat Jun 10 15:19:53 CST 2023
+MySQL.DoBackup--> Backup startedSat Jun 10 15:19:58 CST 2023
+
+MySQL.DoBackup--> Processing DB apologetica Sat Jun 10 15:20:00 CST 2023
+
+MySQL.DoBackup--> Database apologetica completed successfullySat Jun 10 15:20:00 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Sat Jun 10 15:20:03 CST 2023
+
+MySQL.DoBackup--> Database credito_prod completed successfullySat Jun 10 15:20:03 CST 2023
+
+MySQL.DoBackup--> Processing DB pulange Sat Jun 10 15:20:40 CST 2023
+
+MySQL.DoBackup--> Database pulange completed successfullySat Jun 10 15:20:40 CST 2023
+
+MySQL.DoBackup--> Backup process completed successfully!Sat Jun 10 15:30:14 CST 2023
+MySQL.DoBackup--> Backup startedSat Jun 10 15:30:15 CST 2023
+
+MySQL.DoBackup--> Processing DB apologetica Sat Jun 10 15:30:16 CST 2023
+
+MySQL.DoBackup--> Database apologetica completed successfullySat Jun 10 15:30:16 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Sat Jun 10 15:30:19 CST 2023
+
+MySQL.DoBackup--> Database credito_prod completed successfullySat Jun 10 15:30:19 CST 2023
+
+MySQL.DoBackup--> Processing DB pulange Sat Jun 10 15:30:54 CST 2023
+
+MySQL.DoBackup--> Database pulange completed successfullySat Jun 10 15:30:54 CST 2023
+
+MySQL.DoBackup--> Backup process completed successfully!Sat Jun 10 15:33:04 CST 2023
+MySQL.DoBackup--> Backup startedSat Jun 10 15:33:06 CST 2023
+
+MySQL.DoBackup--> Processing DB apologetica Sat Jun 10 15:33:08 CST 2023
+
+MySQL.DoBackup--> Database apologetica completed successfullySat Jun 10 15:33:08 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Sat Jun 10 15:33:11 CST 2023
+
+MySQL.DoBackup--> Database credito_prod completed successfullySat Jun 10 15:33:11 CST 2023
+
+MySQL.DoBackup--> Processing DB pulange Sat Jun 10 15:33:39 CST 2023
+
+MySQL.DoBackup--> Database pulange completed successfullySat Jun 10 15:33:39 CST 2023
+
+MySQL.DoBackup--> Backup process completed successfully!Sat Jun 10 15:34:18 CST 2023
+MySQL.DoBackup--> Backup startedSat Jun 10 15:34:20 CST 2023
+
+MySQL.DoBackup--> Processing DB apologetica Sat Jun 10 15:34:21 CST 2023
+
+MySQL.DoBackup--> Database apologetica completed successfullySat Jun 10 15:34:21 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Sat Jun 10 15:34:24 CST 2023
+
+MySQL.DoBackup--> Database credito_prod completed successfullySat Jun 10 15:34:24 CST 2023
+
+MySQL.DoBackup--> Processing DB pulange Sat Jun 10 15:34:58 CST 2023
+
+MySQL.DoBackup--> Database pulange completed successfullySat Jun 10 15:34:58 CST 2023
+
+MySQL.DoBackup--> Backup process completed successfully!Sat Jun 10 15:42:58 CST 2023
+MySQL.DoBackup--> Backup startedSat Jun 10 15:43:01 CST 2023
+
+MySQL.DoBackup--> Processing DB apologetica Sat Jun 10 15:43:02 CST 2023
+
+MySQL.DoBackup--> Database apologetica completed successfullySat Jun 10 15:43:02 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Sat Jun 10 15:43:05 CST 2023
+
+MySQL.DoBackup--> Database credito_prod completed successfullySat Jun 10 15:43:05 CST 2023
+
+MySQL.DoBackup--> Processing DB pulange Sat Jun 10 15:43:39 CST 2023
+
+MySQL.DoBackup--> Database pulange completed successfullySat Jun 10 15:43:39 CST 2023
+
+MySQL.DoBackup--> Backup process completed successfully!Sat Jun 10 15:47:11 CST 2023
+MySQL.DoBackup--> Backup startedSat Jun 10 15:47:13 CST 2023
+
+MySQL.DoBackup--> Processing DB apologetica Sat Jun 10 15:47:15 CST 2023
+
+MySQL.DoBackup--> Database apologetica completed successfullySat Jun 10 15:47:15 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Sat Jun 10 15:47:18 CST 2023
+
+MySQL.DoBackup--> Database credito_prod completed successfullySat Jun 10 15:47:18 CST 2023
+
+MySQL.DoBackup--> Processing DB pulange Sat Jun 10 15:47:52 CST 2023
+
+MySQL.DoBackup--> Database pulange completed successfullySat Jun 10 15:47:52 CST 2023
+
+MySQL.DoBackup--> Backup process completed successfully!Sat Jun 10 15:50:24 CST 2023
+MySQL.DoBackup--> Backup startedSat Jun 10 15:50:25 CST 2023
+
+MySQL.DoBackup--> Processing DB apologetica Sat Jun 10 15:50:26 CST 2023
+
+MySQL.DoBackup--> Database apologetica completed successfullySat Jun 10 15:50:26 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Sat Jun 10 15:50:30 CST 2023
+
+MySQL.DoBackup--> Database credito_prod completed successfullySat Jun 10 15:50:30 CST 2023
+
+MySQL.DoBackup--> Processing DB pulange Sat Jun 10 15:51:05 CST 2023
+
+MySQL.DoBackup--> Database pulange completed successfullySat Jun 10 15:51:05 CST 2023
+
+MySQL.DoBackup--> Backup process completed successfully!Sat Jun 10 15:52:01 CST 2023
+MySQL.DoBackup--> Backup startedSat Jun 10 15:52:07 CST 2023
+
+MySQL.DoBackup--> Processing DB apologetica Sat Jun 10 15:52:08 CST 2023
+
+MySQL.DoBackup--> Database apologetica completed successfullySat Jun 10 15:52:08 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Sat Jun 10 15:52:11 CST 2023
+
+MySQL.DoBackup--> Database credito_prod completed successfullySat Jun 10 15:52:11 CST 2023
+
+MySQL.DoBackup--> Processing DB pulange Sat Jun 10 15:52:45 CST 2023
+
+MySQL.DoBackup--> Database pulange completed successfullySat Jun 10 15:52:45 CST 2023
+
+MySQL.DoBackup--> Backup process completed successfully!Sat Jun 10 15:53:04 CST 2023
+MySQL.DoBackup--> Backup startedSat Jun 10 15:53:04 CST 2023
+
+MySQL.DoBackup--> Processing DB apologetica Sat Jun 10 15:53:06 CST 2023
+
+MySQL.DoBackup--> Database apologetica completed successfullySat Jun 10 15:53:06 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Sat Jun 10 15:53:09 CST 2023
+
+MySQL.DoBackup--> Database credito_prod completed successfullySat Jun 10 15:53:09 CST 2023
+
+MySQL.DoBackup--> Processing DB pulange Sat Jun 10 15:53:43 CST 2023
+
+MySQL.DoBackup--> Database pulange completed successfullySat Jun 10 15:53:43 CST 2023
+
+MySQL.DoBackup--> Backup process completed successfully!Sat Jun 10 15:58:22 CST 2023
+MySQL.DoBackup--> Backup startedSat Jun 10 15:58:22 CST 2023
+
+MySQL.DoBackup--> Processing DB apologetica Sat Jun 10 15:58:24 CST 2023
+
+MySQL.DoBackup--> Database apologetica completed successfullySat Jun 10 15:58:24 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Sat Jun 10 15:58:27 CST 2023
+
+MySQL.DoBackup--> Database credito_prod completed successfullySat Jun 10 15:58:27 CST 2023
+
+MySQL.DoBackup--> Processing DB pulange Sat Jun 10 15:58:55 CST 2023
+
+MySQL.DoBackup--> Database pulange completed successfullySat Jun 10 15:58:55 CST 2023
+
+MySQL.DoBackup--> Backup process completed successfully!Sat Jun 10 15:58:58 CST 2023
+MySQL.DoBackup--> Backup startedSat Jun 10 15:58:58 CST 2023
+
+MySQL.DoBackup--> Processing DB apologetica Sat Jun 10 15:59:00 CST 2023
+
+MySQL.DoBackup--> Database apologetica completed successfullySat Jun 10 15:59:00 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Sat Jun 10 15:59:03 CST 2023
+
+MySQL.DoBackup--> Database credito_prod completed successfullySat Jun 10 15:59:03 CST 2023
+
+MySQL.DoBackup--> Processing DB pulange Sat Jun 10 15:59:32 CST 2023
+
+MySQL.DoBackup--> Database pulange completed successfullySat Jun 10 15:59:32 CST 2023
+
+MySQL.DoBackup--> Backup process completed successfully!Sat Jun 10 15:59:34 CST 2023
+MySQL.DoBackup--> Backup startedSat Jun 10 15:59:34 CST 2023
+
+MySQL.DoBackup--> Processing DB apologetica Sat Jun 10 15:59:36 CST 2023
+
+MySQL.DoBackup--> Database apologetica completed successfullySat Jun 10 15:59:36 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Sat Jun 10 15:59:38 CST 2023
+
+MySQL.DoBackup--> Database credito_prod completed successfullySat Jun 10 15:59:38 CST 2023
+
+MySQL.DoBackup--> Processing DB pulange 
