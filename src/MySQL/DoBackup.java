@@ -164,6 +164,9 @@ public class DoBackup {
         tanto el archivo se lee correctamente y en debug se ven las tildes y
         el html está configurado igual que la clase de java charset=iso-8859-1
         Y si uso la función que está comentada tampoco se convierte a tildes.
+        IMPORTANTE:
+        Comprobé que esto solo ocurre si corro el backup desde el IDE, la versión
+        compilada si lo hace bien.
         */
         //String text = Ut.stringToHTML(Ut.fileToString(path));
         String text = Ut.fileToString(path);

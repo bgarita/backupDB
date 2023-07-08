@@ -22,6 +22,20 @@ public class Backup {
      * @throws java.io.FileNotFoundException
      */
     public static void main(String[] args) throws Exception {
+        boolean runOnce = false;
+        if (args != null) {
+            String[] param1 = args[0].split("=");
+            runOnce = param1[1].trim().equals("true");
+        }
+        
+        // Si se recibió el parámetro de correr solo una vez
+        // se ejecuta de inmediato y termina la sesión.
+        // Caso contrario se programa con el tiempo establecido en las propiedades.
+        if (runOnce) {
+            OsaisBackup.main(args);
+            return;
+        }
+        
         TimerTask tasknew;
         final long interval = getInterval();
         setStartTime();
