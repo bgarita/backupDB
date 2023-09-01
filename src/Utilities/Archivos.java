@@ -15,11 +15,9 @@ import java.nio.file.Files;
 import java.nio.file.LinkOption;
 import java.nio.file.Paths;
 import java.nio.file.attribute.FileTime;
-import java.nio.file.attribute.PosixFileAttributeView;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
-import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.zip.ZipEntry;
@@ -236,15 +234,15 @@ public class Archivos {
     } // end stringToFile
 
     /**
-     * Comprime un archivo o una carpeta con todos sus archivos.No comprime
-     * subcarpetas.Esa funcionalidad aún no se le ha agregado.
+     * Comprime un archivo o carpeta y todos sus archivos y subcarpetas.
      *
      * @author Bosco Garita Azofeifa
      * @since 20/03/2020
      * @param sourceFile File puede ser un archivo o una carpeta.
      * @param targetFile File debe ser el nombre de un archivo que es donde se
-     * guardarán los archivos comprimidos. Si viene nulo el sistema asumirá el
-     * mismo nombre que el origen.
+     * guardarán los archivos comprimidos. No debe incluir la extensión ya que
+     * ésta le será agregada por default (.zip). 
+     * Si el targetFile viene nulo el sistema asumirá el mismo nombre que el origen.
      * @throws FileNotFoundException
      * @throws IOException
      */
@@ -259,12 +257,10 @@ public class Archivos {
 
         fos = new FileOutputStream(targetFileName);
 
-        ZipOutputStream zos = new ZipOutputStream(fos);
-
-        addZipFile(sourceFile, zos);
-
-        zos.closeEntry();
-        zos.close();
+        try (ZipOutputStream zos = new ZipOutputStream(fos)) {
+            addZipFile(sourceFile, zos);
+            zos.closeEntry();
+        }
         System.out.println("\nZipped file: " + targetFileName);
     } // end zipFile
 
