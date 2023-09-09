@@ -122,7 +122,8 @@ public class DoBackup {
                 fos.close();
                 is.close();
 
-                archivo.zipFile(new File(fileName), new File(zipFileName));
+                //archivo.zipFile(new File(fileName), new File(zipFileName));
+                archivo.zipCryptFile(new File(fileName), new File(zipFileName + ".zip"));
 
                 new File(fileName).delete();
                 new Bitacora().writeToLog("\n" + this.getClass().getName() + "--> " + "Database " + db + " completed successfully");

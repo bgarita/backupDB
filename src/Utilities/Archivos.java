@@ -22,16 +22,23 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
+import net.lingala.zip4j.ZipFile;
+import net.lingala.zip4j.exception.ZipException;
+import net.lingala.zip4j.model.ZipParameters;
+import net.lingala.zip4j.model.enums.AesKeyStrength;
+import net.lingala.zip4j.model.enums.EncryptionMethod;
 
 /**
- * @author: Crysfel Villa Created: Friday, June 03, 2005 4:54:59 PM Modified:
- * Friday, June 03, 2005 4:54:59 PM Modified: Sunday, Sept 08, 2013 6:52:00 PM
- * Bosco Garita
+ * @author: Crysfel Villa Created: Friday, June 03, 2005 4:54:59 PM 
+ * Modified: Friday, June 03, 2005 4:54:59 PM Bosco Garita
+ * Modified: Sunday, Sept 08, 2013 6:52:00 PM Bosco Garita
+ * Modified: Saturday, Sept 09, 2023 6:37:00 AM Bosco Garita
  */
 public class Archivos {
 
     private boolean error;
     private String mensaje_error;
+    private static final String PASSWORD = "G-A*ga*311266$";
 
     public boolean isError() {
         return error;
@@ -290,6 +297,34 @@ public class Archivos {
             zos.write(bytes, 0, bytes.length);
         } // end if
     } // end addZipFile
+    
+    
+    // Librería: https://github.com/srikanth-lingala/zip4j
+    public void zipCryptFile(File sourceFile, File targetFile) throws ZipException {
+        if (!sourceFile.exists()) {
+            throw new ZipException(sourceFile.getAbsolutePath() + " does not exist.");
+        }
+        
+        System.out.println("Zipping " + sourceFile.getAbsolutePath() + " ..");
+        
+        ZipParameters zipParameters = new ZipParameters();
+        zipParameters.setEncryptFiles(true);
+        zipParameters.setEncryptionMethod(EncryptionMethod.AES);
+        // Below line of code is optional. 
+        // AES 256 is used by default. 
+        // You can override it to use AES 128. AES 192 is supported only for extracting.
+        zipParameters.setAesKeyStrength(AesKeyStrength.KEY_STRENGTH_256);
+        
+        ZipFile zipFile = new ZipFile(targetFile, PASSWORD.toCharArray());
+        
+        if (sourceFile.isDirectory()) {
+            zipFile.addFolder(sourceFile, zipParameters);
+        } else if (sourceFile.isFile()) {
+            zipFile.addFile(sourceFile, zipParameters);
+        }
+        
+        System.out.println("Zipping " + sourceFile.getAbsolutePath() + " .. complete.");
+    }
     
     public long getAge(File file) throws IOException {
         
