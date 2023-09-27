@@ -23,6 +23,7 @@ public class Backup {
      */
     public static void main(String[] args) throws Exception {
         boolean runOnce = false;
+        // Expected parameter -runOnce=true
         if (args != null) {
             String[] param1 = args[0].split("=");
             runOnce = param1[1].trim().equals("true");

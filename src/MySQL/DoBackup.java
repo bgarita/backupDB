@@ -62,7 +62,7 @@ public class DoBackup {
             return;
         } // end try-catch
 
-        // Cambiar después a una lista
+        // Recorrer la lista de base de datos
         for (String dataBase : dataBases) {
             db = dataBase.trim();
 
@@ -80,7 +80,7 @@ public class DoBackup {
             Luego habrá que crear un parámetro para ubicar la herramienta según
             corresponda con el motor de base de datos.
             
-            25/03/2023 Al hacer pruebaS se determinó que las funciones y procedimientos almacenados
+            25/03/2023 Al hacer pruebas se determinó que las funciones y procedimientos almacenados
             solo se respaldan si el usuario tiene los siguientes permisos:
             GRANT SELECT, SHOW VIEW, CREATE TEMPORARY TABLES, EVENT, TRIGGER ON *.* TO 'backup'@'localhost';
              */
