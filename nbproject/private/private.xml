@@ -3,10 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Java%20Programs/BackupDB/src/MySQL/DoBackup.java</file>
             <file>file:/C:/Java%20Programs/BackupDB/src/Main/Backup.java</file>
-            <file>file:/C:/Java%20Programs/BackupDB/src/Utilities/Archivos.java</file>
+            <file>file:/C:/Java%20Programs/BackupDB/src/Utilities/Props.java</file>
+            <file>file:/C:/Java%20Programs/BackupDB/src/Mail/MailSender.java</file>
             <file>file:/C:/Java%20Programs/BackupDB/src/Utilities/Ut.java</file>
+            <file>file:/C:/Java%20Programs/BackupDB/src/MySQL/DoBackup.java</file>
+            <file>file:/C:/Java%20Programs/BackupDB/src/Utilities/Archivos.java</file>
+            <file>file:/C:/Java%20Programs/BackupDB/src/Mail/SendMail.java</file>
             <file>file:/C:/Java%20Programs/BackupDB/src/Main/OsaisBackup.java</file>
         </group>
     </open-files>

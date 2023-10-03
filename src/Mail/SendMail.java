@@ -1,6 +1,7 @@
 package Mail;
 
 import Utilities.Bitacora;
+import java.io.IOException;
 import java.util.GregorianCalendar;
 
 /**
@@ -111,7 +112,8 @@ public class SendMail {
                 this.errorMsg = sender.getErrorMessage();
                 return false;
             } // end if
-        } catch (Exception ex) {
+            System.out.println("Message sent to " + destinatario);
+        } catch (IOException ex) {
             this.error = true;
             this.errorMsg = "ERROR: " + ex.getMessage() + " " + destinatario + ". "
                     + "Correo no enviado.";
@@ -131,7 +133,8 @@ public class SendMail {
      * @author Bosco Garita, Octubre 2018
      * @param senderMask String se usa para enmascarar el remitente para que
      * quien reciba el correo responda a esta dirección y no al que realmente
-     * está enviando.
+     * está enviando. Pero esto solo funciona con correo propio, no con Gmail
+     * u otros similares.
      * @param archivo String nombre ruta completa del adjunto
      * @return boolean true=Exito, false=Fallido
      */
