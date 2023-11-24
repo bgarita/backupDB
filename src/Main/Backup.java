@@ -1,6 +1,7 @@
 package Main;
 
-import java.io.FileInputStream;
+import Utilities.Props;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Calendar;
@@ -23,7 +24,8 @@ public class Backup {
      */
     public static void main(String[] args) throws Exception {
         boolean runOnce = false;
-        if (args != null) {
+        // Expected parameter -runOnce=true
+        if (args != null && args.length > 0) {
             String[] param1 = args[0].split("=");
             runOnce = param1[1].trim().equals("true");
         }
@@ -39,6 +41,8 @@ public class Backup {
         TimerTask tasknew;
         final long interval = getInterval();
         setStartTime();
+        
+        System.out.println("Backup scheduled to run at " + getStartTime());
 
         tasknew = new TimerTask() {
             // this method performs the task
@@ -61,10 +65,7 @@ public class Backup {
         int seg = 60;
         int mil = 1000;
 
-        Properties scheduleProp = new Properties();
-        try (FileInputStream fi = new FileInputStream("schedule.properties")) {
-            scheduleProp.load(fi);
-        } // end try
+        Properties scheduleProp = Props.getProps(new File("schedule.properties"));
 
         String[] temp = scheduleProp.getProperty("interval").split("-");
         switch (temp[1]) {
@@ -88,10 +89,7 @@ public class Backup {
     private static void setStartTime() throws FileNotFoundException, IOException {
         int hour;
         int min;
-        Properties scheduleProp = new Properties();
-        try (FileInputStream fi = new FileInputStream("schedule.properties")) {
-            scheduleProp.load(fi);
-        } // end try
+        Properties scheduleProp = Props.getProps(new File("schedule.properties"));
 
         String[] temp = scheduleProp.getProperty("startTime").split(":");
         hour = Integer.parseInt(temp[0]);
@@ -103,4 +101,16 @@ public class Backup {
         STARTTIME.set(Calendar.MILLISECOND, 0);
 
     } // end setStartTime
+    
+    private static String getStartTime() throws IOException {
+        int hour;
+        int min;
+        Properties scheduleProp = Props.getProps(new File("schedule.properties"));
+
+        String[] temp = scheduleProp.getProperty("startTime").split(":");
+        hour = Integer.parseInt(temp[0]);
+        min = Integer.parseInt(temp[1]);
+        
+        return hour + ":" + min;
+    }
 } // end class

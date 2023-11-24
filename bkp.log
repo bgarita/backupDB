@@ -439,4 +439,112 @@ MySQL.DoBackup--> Processing DB credito_prod Sat Jun 10 15:59:38 CST 2023
 
 MySQL.DoBackup--> Database credito_prod completed successfullySat Jun 10 15:59:38 CST 2023
 
-MySQL.DoBackup--> Processing DB pulange 
+MySQL.DoBackup--> Processing DB pulange Mon Oct 02 19:25:37 CST 2023
+MySQL.DoBackup--> Backup startedMon Oct 02 19:25:37 CST 2023
+
+MySQL.DoBackup--> Processing DB ecred Mon Oct 02 19:25:40 CST 2023
+
+MySQL.DoBackup--> ERROR: Server not available!
+Server: DESKTOP-HMLO877
+Database: ecred
+Mon Oct 02 19:25:44 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Mon Oct 02 19:25:47 CST 2023
+
+MySQL.DoBackup--> ERROR: Server not available!
+Server: DESKTOP-HMLO877
+Database: credito_prod
+Mon Oct 02 19:25:49 CST 2023
+MySQL.DoBackup--> Backup startedMon Oct 02 19:25:49 CST 2023
+
+MySQL.DoBackup--> Processing DB ecred Mon Oct 02 19:25:52 CST 2023
+
+MySQL.DoBackup--> ERROR: Server not available!
+Server: DESKTOP-HMLO877
+Database: ecred
+Mon Oct 02 19:25:54 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Mon Oct 02 19:25:57 CST 2023
+
+MySQL.DoBackup--> ERROR: Server not available!
+Server: DESKTOP-HMLO877
+Database: credito_prod
+Mon Oct 02 19:26:00 CST 2023
+MySQL.DoBackup--> Backup startedMon Oct 02 19:26:00 CST 2023
+
+MySQL.DoBackup--> Processing DB ecred Mon Oct 02 19:26:03 CST 2023
+
+MySQL.DoBackup--> ERROR: Server not available!
+Server: DESKTOP-HMLO877
+Database: ecred
+Mon Oct 02 19:26:07 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Mon Oct 02 19:26:10 CST 2023
+
+MySQL.DoBackup--> ERROR: Server not available!
+Server: DESKTOP-HMLO877
+Database: credito_prod
+Mon Oct 02 19:26:13 CST 2023
+MySQL.DoBackup--> Backup startedMon Oct 02 19:26:13 CST 2023
+
+MySQL.DoBackup--> Processing DB ecred Mon Oct 02 19:26:15 CST 2023
+
+MySQL.DoBackup--> ERROR: Server not available!
+Server: DESKTOP-HMLO877
+Database: ecred
+Mon Oct 02 19:26:18 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Mon Oct 02 19:26:20 CST 2023
+
+MySQL.DoBackup--> ERROR: Server not available!
+Server: DESKTOP-HMLO877
+Database: credito_prod
+Mon Oct 02 19:26:22 CST 2023
+MySQL.DoBackup--> Backup startedMon Oct 02 19:26:22 CST 2023
+
+MySQL.DoBackup--> Processing DB ecred Mon Oct 02 19:26:25 CST 2023
+
+MySQL.DoBackup--> ERROR: Server not available!
+Server: DESKTOP-HMLO877
+Database: ecred
+Mon Oct 02 19:26:27 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Mon Oct 02 19:26:30 CST 2023
+
+MySQL.DoBackup--> ERROR: Server not available!
+Server: DESKTOP-HMLO877
+Database: credito_prod
+Mon Oct 02 19:31:36 CST 2023
+MySQL.DoBackup--> Backup startedMon Oct 02 19:31:37 CST 2023
+
+MySQL.DoBackup--> Processing DB ecred Mon Oct 02 19:31:39 CST 2023
+
+MySQL.DoBackup--> Database ecred completed successfullyMon Oct 02 19:31:39 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Mon Oct 02 19:31:41 CST 2023
+
+MySQL.DoBackup--> Database credito_prod completed successfullyMon Oct 02 19:31:41 CST 2023
+
+MySQL.DoBackup--> Backup process completed successfully!Mon Oct 02 19:31:43 CST 2023
+MySQL.DoBackup--> Backup startedMon Oct 02 19:31:43 CST 2023
+
+MySQL.DoBackup--> Processing DB ecred Mon Oct 02 19:31:45 CST 2023
+
+MySQL.DoBackup--> Database ecred completed successfullyMon Oct 02 19:31:45 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Mon Oct 02 19:31:47 CST 2023
+
+MySQL.DoBackup--> Database credito_prod completed successfullyMon Oct 02 19:31:47 CST 2023
+
+MySQL.DoBackup--> Backup process completed successfully!Mon Oct 02 20:56:20 CST 2023
+MySQL.DoBackup--> Backup startedMon Oct 02 20:56:21 CST 2023
+
+MySQL.DoBackup--> Processing DB ecred Mon Oct 02 20:56:23 CST 2023
+
+MySQL.DoBackup--> Database ecred completed successfullyMon Oct 02 20:56:23 CST 2023
+
+MySQL.DoBackup--> Processing DB credito_prod Mon Oct 02 20:56:24 CST 2023
+
+MySQL.DoBackup--> Database credito_prod completed successfullyMon Oct 02 20:56:24 CST 2023
+
+MySQL.DoBackup--> Backup process completed successfully!

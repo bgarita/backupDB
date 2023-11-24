@@ -3,10 +3,9 @@ package Main;
 import MySQL.DoBackup;
 import Utilities.Archivos;
 import Utilities.Bitacora;
+import Utilities.Props;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
@@ -24,12 +23,14 @@ public class OsaisBackup {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String databaseProps;
-        String targetProps;
-        String userProps;
+        String databaseProps = "backupDB.properties";
+        String targetProps = "destinoF.properties";
+        String userProps = "backupUser.properties";
+        
         String user;
         String passw;
         String destino;
+        
         Properties dbList;
         Properties targetFolder;
         Properties backupUser;
@@ -37,56 +38,44 @@ public class OsaisBackup {
         int port;
         String host;
 
-        databaseProps = "backupDB.properties";
-        targetProps = "destinoF.properties";
-        userProps = "backupUser.properties";
-
-        dbList = new Properties();
-        targetFolder = new Properties();
-        backupUser = new Properties();
-
         try {
-            try (InputStream database = new FileInputStream(databaseProps); // Lectura
-                     InputStream targetPropsFile = new FileInputStream(targetProps); // Lectura
-                     InputStream userFile = new FileInputStream(userProps); // Lectura
-                    ) {
-                dbList.load(database);
-                targetFolder.load(targetPropsFile);
-                backupUser.load(userFile);
+            dbList = Props.getProps(new File(databaseProps));
+            targetFolder = Props.getProps(new File(targetProps));
+            backupUser = Props.getProps(new File(userProps));
 
-                if (targetFolder.isEmpty()) {
-                    throw new Exception("Target folder is empty. See " + targetProps);
-                } // end if
+            if (targetFolder.isEmpty()) {
+                throw new Exception("Target folder is empty. See " + targetProps);
+            } // end if
 
-                destino = targetFolder.getProperty("backup_folder");
+            destino = targetFolder.getProperty("backup_folder");
 
-                user = backupUser.getProperty("usr");
-                int days;
-                try {
-                    days = Integer.parseInt(targetFolder.getProperty("keep_file_days"));
-                } catch (NumberFormatException ex) {
-                    days = 30;
-                }
-                passw = backupUser.getProperty("psw");
-                port = Integer.parseInt(backupUser.getProperty("port"));
-                host = backupUser.getProperty("host");
-
-                Enumeration<?> en = dbList.propertyNames();
-                List<String> databases = new ArrayList<>();
-
-                while (en.hasMoreElements()) {
-                    String key = (String) en.nextElement();
-                    String value = dbList.getProperty(key);
-                    databases.add(value);
-                } // end while
-
-                // Eliminar los backups que superen los días de permanencia
-                removeOldFiles(destino, days);
-
-                DoBackup backup
-                        = new DoBackup(databases, destino, user, passw, port, host);
-                backup.run();
+            user = backupUser.getProperty("usr");
+            int days;
+            try {
+                days = Integer.parseInt(targetFolder.getProperty("keep_file_days"));
+            } catch (NumberFormatException ex) {
+                days = 30;
             }
+            passw = backupUser.getProperty("psw");
+            port = Integer.parseInt(backupUser.getProperty("port"));
+            host = backupUser.getProperty("host");
+
+            Enumeration<?> en = dbList.propertyNames();
+            List<String> databases = new ArrayList<>();
+
+            while (en.hasMoreElements()) {
+                String key = (String) en.nextElement();
+                String value = dbList.getProperty(key);
+                databases.add(value);
+            } // end while
+
+            // Eliminar los backups que superen los días de permanencia
+            removeOldFiles(destino, days);
+
+            DoBackup backup
+                    = new DoBackup(databases, destino, user, passw, port, host);
+            backup.run();
+
         } catch (Exception ex) {
             Logger.getLogger(OsaisBackup.class.getName()).log(Level.SEVERE, null, ex);
             File f = new File(databaseProps);
@@ -98,6 +87,7 @@ public class OsaisBackup {
     } // end main
 
     private static void removeOldFiles(String destino, int days) {
+        System.out.println("Checking file life cycle... Keeping " + days + "days.");
         Archivos archivos = new Archivos();
         File folder = new File(destino);
         String[] children = folder.list();

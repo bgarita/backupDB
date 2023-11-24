@@ -4,6 +4,7 @@ import Constants.SystemConstants;
 import Mail.SendMail;
 import Utilities.Archivos;
 import Utilities.Bitacora;
+import Utilities.Props;
 import Utilities.Ut;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -13,6 +14,7 @@ import java.nio.file.FileSystem;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
 import java.util.List;
+import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -38,7 +40,7 @@ public class DoBackup {
         this.host = host;
     }
 
-    public void run() {
+    public void run() throws IOException {
         System.out.println("Backup in progress..");
 
         new Bitacora().writeToLog(this.getClass().getName() + "--> " + "Backup started");
@@ -62,7 +64,7 @@ public class DoBackup {
             return;
         } // end try-catch
 
-        // Cambiar después a una lista
+        // Recorrer la lista de base de datos
         for (String dataBase : dataBases) {
             db = dataBase.trim();
 
@@ -80,7 +82,7 @@ public class DoBackup {
             Luego habrá que crear un parámetro para ubicar la herramienta según
             corresponda con el motor de base de datos.
             
-            25/03/2023 Al hacer pruebaS se determinó que las funciones y procedimientos almacenados
+            25/03/2023 Al hacer pruebas se determinó que las funciones y procedimientos almacenados
             solo se respaldan si el usuario tiene los siguientes permisos:
             GRANT SELECT, SHOW VIEW, CREATE TEMPORARY TABLES, EVENT, TRIGGER ON *.* TO 'backup'@'localhost';
              */
@@ -122,7 +124,6 @@ public class DoBackup {
                 fos.close();
                 is.close();
 
-                //archivo.zipFile(new File(fileName), new File(zipFileName));
                 archivo.zipCryptFile(new File(fileName), new File(zipFileName + ".zip"));
 
                 new File(fileName).delete();
@@ -143,6 +144,8 @@ public class DoBackup {
                 mail.setDestinatario("bgarita@hotmail.com"); // Luego hay que parametrizar esto
                 mail.setTexto(text);
                 path = fs.getPath("bkp.log");
+                
+                // Esta dirección solo es una máscara, pero Gmail la ignora.
                 mail.sendMail("bgarita@hotmail.com", path.getFileName().toFile().getAbsolutePath());
             } // end try-catch
         } // end for
@@ -169,12 +172,13 @@ public class DoBackup {
         Comprobé que esto solo ocurre si corro el backup desde el IDE, la versión
         compilada si lo hace bien.
         */
-        //String text = Ut.stringToHTML(Ut.fileToString(path));
         String text = Ut.fileToString(path);
         text = text.replace("[msg]", "Backup ended successfuly!");
 
+        String destinatario = getDestinatarioCorreo();
+        
         SendMail mail = new SendMail();
-        mail.setDestinatario("bgarita@hotmail.com"); // Luego hay que parametrizar esto
+        mail.setDestinatario(destinatario);
         mail.setTitulo("Database Backup");
         mail.setTexto(text);
         mail.sendMail("bgarita@hotmail.com", "");
@@ -198,6 +202,17 @@ public class DoBackup {
 
     public void setPort(int port) {
         this.port = port;
+    }
+
+    private String getDestinatarioCorreo() throws IOException {
+        File mailConfig = new File("mail.properties");
+        Properties props = Props.getProps(mailConfig);
+        String mailTo = props.getProperty("mail.to");
+        if (mailTo == null) {
+            mailTo = "bgarita@hotmail.com";
+        }
+        
+        return mailTo;
     }
 
 } // end DoBackup

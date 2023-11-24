@@ -7,9 +7,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -19,10 +17,8 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Properties;
 import java.util.UUID;
-import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.stream.Stream;
 import javax.swing.JTable;
 
 /**
@@ -185,27 +181,24 @@ public class Ut {
 
     public static Properties getMailConfig() throws FileNotFoundException, IOException {
         Properties props = new Properties();
-        String configFile = "mail.properties"; // Debe estar en la carpeta de instalacion del sistema
-        File mailConfig = new File(configFile);
-
-        // Establecer los parámetros predeterminados
-        props.put("mail.smtp.host", "smtp.gmail.com");
-        props.put("mail.smtp.ssl.trust", "smtp.gmail.com");
-        props.put("mail.smtp.user", "osais311266@gmail.com");
-        props.put("mail.smtp.clave", "rjzyqnamphqnomif");
-        props.put("mail.smtp.auth", "true");
-        props.put("mail.smtp.starttls.enable", "true");
-        props.put("mail.smtp.port", "587");
+        File mailConfig = new File("mail.properties"); // Debe estar en la carpeta de instalacion del sistema
 
         System.out.println("\nSending info mail...");
         System.out.println("Using parameter file: " + mailConfig.getAbsolutePath());
 
         if (mailConfig.exists()) {
-            try (FileInputStream fis = new FileInputStream(mailConfig)) {
-                props.load(fis);
-                fis.close();
-            }
-        } // end if
+            props = Props.getProps(mailConfig);
+        } else {
+            // Establecer los parámetros predeterminados
+            props.put("mail.smtp.host", "smtp.gmail.com");
+            props.put("mail.smtp.ssl.trust", "smtp.gmail.com");
+            props.put("mail.smtp.user", "osais311266@gmail.com");
+            props.put("mail.smtp.clave", "rjzyqnamphqnomif");
+            props.put("mail.smtp.auth", "true");
+            props.put("mail.smtp.starttls.enable", "true");
+            props.put("mail.smtp.port", "587");
+            props.put("mail.to", "bgarita@hotmail.com");
+        }
         return props;
     } // end getMailConfig
 
